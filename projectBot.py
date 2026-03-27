@@ -11,6 +11,8 @@ load_dotenv('token.env')
 TOKEN:Final = os.getenv('BOT_TOKEN')
 username: Final = 'removeBackground_ChatBot'
 
+os.makedirs("./temp", exist_ok=True)
+os.makedirs("./processed", exist_ok=True)
 
 async def help(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id,
